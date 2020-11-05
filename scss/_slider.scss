@@ -1,7 +1,7 @@
 .slider {
   position: relative;
   &__slide {
-    height: 400px;
+    padding: 40px 0;
   }
   &__arrow {
     position: absolute;
@@ -19,16 +19,17 @@
     &--next {
       right: 0;
     }
-    &:hover,
-    &:focus,
-    &:active {
-      transform: scale(1.4);
+    
+    @include hover {
+      
     }
+
   }
   &__dots {
     list-style: none;
     padding: 0 70px;
     text-align: center;
+    margin: 0;
     li {
       display: inline-block;
     }
@@ -41,11 +42,14 @@
     outline: none;
     border: $border-width solid #fff;
     background-color: $primary-color;
-    &:hover,
-    &:focus,
-    &:active {
+    &--active {
+      border-color: $primary-color;
+      background-color: #fff;
+    }
+    @include hover{
       border-color: $primary-color;
       background-color: #fff;
     }
   }
 }
+
