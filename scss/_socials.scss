@@ -13,8 +13,8 @@
     display: inline-block;
     width: 32px;
     height: 32px;
-    line-height: 32px - $border-width;
     border-radius: 50%;
+    line-height: 32px - $border-width;
     border: $border-width solid $icon-color;
     @include hover {
       background-color: $icon-color;

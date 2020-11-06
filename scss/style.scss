@@ -23,7 +23,7 @@ body {
 }
 
 .container {
-  width: 1140px;
+  max-width: 1140px;
   padding: 15px;
   margin: 0 auto;
 }
@@ -123,5 +123,46 @@ body {
   &__position {
     font-size: 2.4rem;
     color: $secondary-color;
+  }
+  &__text {
+    margin-bottom: 23px;
+  }
+  &__line {
+    max-width: 15%;
+    background-color: $primary-color;
+    height: 5px;
+    position: relative;
+    margin: 0 auto;
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 5px;
+      top: 0;
+      bottom: 0;
+      background-color: #fff;
+    }
+    &::before {
+      left: 20%;
+    }
+    &::after {
+      right: 20%;
+    }
+  }
+  &__linkwrap {
+    margin-top: 25px;
+  }
+  &__link {
+    text-decoration: none;
+    color: $secondary-color;
+    border: $border;
+    padding: 3px 10px;
+    font: 900 1.4rem/1.7 $btn-ff;
+    text-transform: uppercase;
+    @include hover {
+      color: #fff;
+      background-color: $primary-color;
+    }
   }
 }
