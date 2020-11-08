@@ -126,15 +126,14 @@ body {
   }
   &__text {
     &:after {
-      $c1: $c1;
-      $c2: $c2;
+      $c1: $primary-color;
+      $c2: transparent;
 
       content: '';
       display: block;
       margin: 20px auto;
       width: 52px;
       height: 4px;
-      // background-color: $c1;
       background-image: linear-gradient(to right, $c1 20%, $c2 20%,
       $c2 30%, $c1 30%, $c1 70%, $c2 70%,$c2 80%, $c1 80%);
     }
