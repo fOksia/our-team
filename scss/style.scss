@@ -125,31 +125,21 @@ body {
     color: $secondary-color;
   }
   &__text {
-    margin-bottom: 23px;
-  }
-  &__line {
-    max-width: 15%;
-    background-color: $primary-color;
-    height: 5px;
-    position: relative;
-    margin: 0 auto;
-    &::before,
-    &::after {
+    &:after {
+      $c1: $c1;
+      $c2: $c2;
+
       content: '';
       display: block;
-      position: absolute;
-      max-width: 3%;
-      top: 0;
-      bottom: 0;
-      background-color: #fff;
-    }
-    &::before {
-      left: 20%;
-    }
-    &::after {
-      right: 20%;
+      margin: 20px auto;
+      width: 52px;
+      height: 4px;
+      // background-color: $c1;
+      background-image: linear-gradient(to right, $c1 20%, $c2 20%,
+      $c2 30%, $c1 30%, $c1 70%, $c2 70%,$c2 80%, $c1 80%);
     }
   }
+
   &__linkwrap {
     margin-top: 25px;
   }
